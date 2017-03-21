@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC04ABC41E80FC530087BA74 /* ExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ABC31E80FC530087BA74 /* ExampleProtocol.swift */; };
+		BC04ABC81E80FD9C0087BA74 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ABC71E80FD9C0087BA74 /* RootViewController.swift */; };
+		BC04ABCA1E811C2A0087BA74 /* LGFArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ABC91E811C2A0087BA74 /* LGFArrayViewController.swift */; };
 		BC480F5C1E80BF3D004A55E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC480F5B1E80BF3D004A55E6 /* AppDelegate.swift */; };
 		BC480F5E1E80BF3D004A55E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC480F5D1E80BF3D004A55E6 /* ViewController.swift */; };
 		BC480F611E80BF3D004A55E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC480F5F1E80BF3D004A55E6 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC04ABC31E80FC530087BA74 /* ExampleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleProtocol.swift; sourceTree = "<group>"; };
+		BC04ABC71E80FD9C0087BA74 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		BC04ABC91E811C2A0087BA74 /* LGFArrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGFArrayViewController.swift; sourceTree = "<group>"; };
 		BC480F581E80BF3D004A55E6 /* SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC480F5B1E80BF3D004A55E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC480F5D1E80BF3D004A55E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC04ABC21E80FC250087BA74 /* SwiftProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				BC04ABC31E80FC530087BA74 /* ExampleProtocol.swift */,
+				BC04ABC91E811C2A0087BA74 /* LGFArrayViewController.swift */,
+			);
+			path = SwiftProtocol;
+			sourceTree = "<group>";
+		};
 		BC480F4F1E80BF3C004A55E6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +112,14 @@
 		BC480F5A1E80BF3D004A55E6 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				BC04ABC21E80FC250087BA74 /* SwiftProtocol */,
 				BC480F5B1E80BF3D004A55E6 /* AppDelegate.swift */,
 				BC480F5D1E80BF3D004A55E6 /* ViewController.swift */,
 				BC480F5F1E80BF3D004A55E6 /* Main.storyboard */,
 				BC480F621E80BF3D004A55E6 /* Assets.xcassets */,
 				BC480F641E80BF3D004A55E6 /* LaunchScreen.storyboard */,
 				BC480F671E80BF3D004A55E6 /* Info.plist */,
+				BC04ABC71E80FD9C0087BA74 /* RootViewController.swift */,
 			);
 			path = SwiftExample;
 			sourceTree = "<group>";
@@ -261,6 +278,9 @@
 			files = (
 				BC480F5E1E80BF3D004A55E6 /* ViewController.swift in Sources */,
 				BC480F5C1E80BF3D004A55E6 /* AppDelegate.swift in Sources */,
+				BC04ABC81E80FD9C0087BA74 /* RootViewController.swift in Sources */,
+				BC04ABC41E80FC530087BA74 /* ExampleProtocol.swift in Sources */,
+				BC04ABCA1E811C2A0087BA74 /* LGFArrayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +525,7 @@
 				BC480F821E80BF3D004A55E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC480F831E80BF3D004A55E6 /* Build configuration list for PBXNativeTarget "SwiftExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				BC480F851E80BF3D004A55E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC480F861E80BF3D004A55E6 /* Build configuration list for PBXNativeTarget "SwiftExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				BC480F881E80BF3D004A55E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
