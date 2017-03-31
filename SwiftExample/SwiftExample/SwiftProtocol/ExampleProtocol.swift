@@ -10,6 +10,6 @@ import Foundation
 
 
 
-public protocol SwiftStatisticsProtocol: NSObjectProtocol {
-    func URLDefProtocol() -> String
+@objc protocol XXXXXX {
+  static  func URLDefProtocol() -> String
 }

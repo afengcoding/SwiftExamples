@@ -27,7 +27,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         return ary
     }()
     
-    // MARK: life cycle
+    // MARK: --life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Swift 知识点"
@@ -38,11 +38,10 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(dataArray)
         tableView.reloadData()
         
-        
     }
     
     
-    // MARK: UITableViewDelegate
+    // MARK: --UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         cell.textLabel?.text = dataArray[indexPath.row]
@@ -57,21 +56,23 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 1
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let myClass = dataArray[indexPath.row]
+        let classType = NSClassFromString(myClass) as? UIViewController.Type
+        if let type = classType {
+            let newVC = type.init()
+            navigationController?.pushViewController(newVC, animated: true)
+        }
+        
+    }
     
     func loadDataArray() {
         var classCount: UInt32 = 0
         let classes = objc_copyClassList(&classCount)
         for i  in 0..<classCount {
             let cls: AnyClass = classes![Int(i)]!
-            var proCount: UInt32 = 0
-            let proAry = class_copyProtocolList(cls, &proCount)
-            print(String.init(cString: class_getName(cls)))
-            
-            for a in 0..<proCount {
-                if proAry![Int(a)]! is SwiftStatisticsProtocol {
-                    self.dataArray.append(String.init(cString: class_getName(cls)))
-                    break
-                }
+            if class_conformsToProtocol(cls, XXXXXX.self) {
+                self.dataArray.append(String.init(cString: class_getName(cls)))
             }
         }
         

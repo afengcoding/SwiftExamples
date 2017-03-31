@@ -8,16 +8,66 @@
 
 import UIKit
 
-class LGFArrayViewController: UIViewController, SwiftStatisticsProtocol {
+class LGFArrayViewController: UIViewController, XXXXXX {
 
-    func URLDefProtocol() -> String {
-         return " Swift array"
+  static  func URLDefProtocol() -> String {
+        return "array "
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        title = self.classForCoder.URLDefProtocol()
+        let catCharacters:[Character] = ["C", "a", "t", "!"]
+        let _ = String(catCharacters)
+        
+        let greeting  = "Guten Tag!"
+        print(greeting[greeting.startIndex])
+        print(greeting[greeting.index(before: greeting.endIndex)])
+        print(greeting[greeting.index(after: greeting.startIndex)])
+        print(greeting.index(greeting.startIndex, offsetBy: 7))
+        for index in greeting.characters.indices {
+            print("\(greeting[index])", terminator: "-")
+        }
+        
+        //插入删除
+        var welcome = "hello"
+        welcome.insert("!", at: welcome.endIndex)
+        print(welcome)
+        
+        welcome.insert(contentsOf: "there".characters, at: welcome.endIndex)
+        print(welcome)
+        
+        welcome.remove(at: welcome.index(before: welcome.endIndex))
+        print(welcome)
+        let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+        welcome.removeSubrange(range)
+        print(welcome)
+        
+        //数组
+        var somelnts = [Int]()
+        print("somelnts is of type[Int] with \(somelnts.count) items")
+        somelnts.append(3)
+        
+        let  threeDoubles = Array(repeating: 0, count: 3)
+        print(threeDoubles)
+        
+        print(somelnts + threeDoubles)
+        
+        if #available(iOS 7, *) {
+            
+        } else {
+            
+        }
+        
+        
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
